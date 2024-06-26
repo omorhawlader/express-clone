@@ -20,12 +20,22 @@ class Micro{
     }
     /**
      * Registers a callback for handling GET requests to a specific path.
+     * 
      * @param {string} path - define a path like ->('/PathName')
      * @param {(req:http.IncomingMessage,res:http.ServerResponse<http.IncomingMessage>)=>} cb - The callback function execute when a mathcing GET request is received.
      */
     get(path,cb){
         this.server.on("request", (req,res)=>{
             if(req.url === path && req.method === "GET") cb(req,res);
+        })
+
+        this.server.on('request')
+    }
+    
+
+    put(path,cb){
+        this.server.on("request", (req,res)=>{
+            if(req.url === path && req.method === "PUT") cb(req,res);
         })
     }
 
