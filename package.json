@@ -2,10 +2,15 @@
   "name": "express-clone",
   "version": "1.0.0",
   "description": "this project for crating my own micro server framework",
-  "main": "app.js",
+  "main": "micro.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon micro.js",
+    "server": "nodemon micro-server.js"
   },
   "author": "omar",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.2"
+  }
 }
